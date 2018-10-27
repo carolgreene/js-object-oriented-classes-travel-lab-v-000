@@ -28,4 +28,13 @@ class Route {
     let verticalDistance = this.endingLocation.vertical - this.beginningLocation.vertical
     return horizontalDistance + verticalDistance
   }
+
+  estimatedTime(peak) {
+    if (peak) {
+      return blocksTravelled() / 2
+    } else {
+      return blocksTravelled() / 3
+    }
+    }
+  }
 }
